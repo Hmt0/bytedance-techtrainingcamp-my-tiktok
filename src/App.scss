@@ -1,0 +1,29 @@
+html {
+  // 滚动容器只捕捉其垂直轴上的捕捉位置
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.app-videos {
+  position: relative;
+  //高度设置
+  height: 100%;
+  max-width: 544px;
+  // width: 100%;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// 隐藏滚动条
+.app-videos::-webkit-scrollbar {
+display: none;
+}
